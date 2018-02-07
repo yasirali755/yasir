@@ -8,7 +8,7 @@
       * THIS PROGRAM WILL Calculate the amaount of pop sales sold for *
       * a local fundraiser all records must be validated. Records in  *
       * error are to be dumped in an error report and provessing      *
-      * bypassed                                                      *
+      * bypassed       good job                                                 *
       *****************************************************************
 
        ENVIRONMENT DIVISION.
@@ -17,10 +17,11 @@
            SELECT POPSL-FILE
                  ASSIGN TO "C:\Users\Owner\Desktop\cobol\CBLPOPSL.DAT"
                  ORGANIZATION IS LINE SEQUENTIAL.
+           SELECT popsl-changes
 
            SELECT PRTSLOUT
                  ASSIGN TO "C:\Users\Owner\Desktop\cobol\COBPOPERR.PRT"
-                 ORGANIZATION IS RECORD SEQUENTIAL.
+                 ORGANIZATION IS  RECORD SEQUENTIAL.
 
            SELECT PRTERROUT
                  ASSIGN TO "C:\Users\Owner\Desktop\cobol\COBPOPERR.PRT"
@@ -33,6 +34,7 @@
              LABEL RECORD IS STANDARD
              RECORD CONTAINS 71 CHARACTERS
              DATA RECORD IS I-REC.
+
 
        01  I-REC.
              05  I-LNAME                 PIC X(15).
